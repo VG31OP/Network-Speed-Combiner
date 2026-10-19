@@ -1,3 +1,7 @@
+# 🚧 **Status: Work in Progress | Not Fully Tested**
+
+This project is under active development. Features may be incomplete, unstable, or subject to change.
+
 # Network Speed Combiner
 
 Network Speed Combiner is a high-performance download manager for Windows, macOS, and Linux that downloads files over multiple internet connections concurrently. If your computer has Wi-Fi and a mobile phone tethered via USB (or Ethernet), Network Speed Combiner utilizes both connections simultaneously for the same download. It supports direct HTTP/HTTPS links, magnet links, and `.torrent` files, complete with queues, detailed chunk telemetry, and per-interface speed and data allowance controls.
