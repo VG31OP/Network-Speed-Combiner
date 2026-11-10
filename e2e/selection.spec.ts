@@ -139,6 +139,11 @@ test('showing a file that has moved says so in a dialog, not on the page', async
   const complete = await plexo.waitForStatus('completed')
   const { rename } = await import('node:fs/promises')
   const page = plexo.page
+  // Wait for completion to move into history and settle in the window before moving the file.
+  await expect
+    .poll(async () => (await plexo.api.listHistory()).some((entry) => entry.id === complete.id))
+    .toBe(true)
+  await page.waitForTimeout(250)
   // The window hasn't been told yet, so the menu still offers it.
   await rename(complete.destinationPath, `${complete.destinationPath}.moved`)
   try {

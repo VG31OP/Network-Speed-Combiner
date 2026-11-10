@@ -2,7 +2,7 @@
 ;(function () {
   'use strict'
   const $ = (id) => document.getElementById(id)
-  const repo = 'https://github.com/anmolkapil/plexo'
+  const repo = 'https://github.com/VG31OP/network-speed-combiner'
   const labels = { mac: 'macOS', win: 'Windows', linux: 'Linux' }
   const sectionIds = ['features', 'downloads', 'faq', 'support']
   const sectionLinks = Array.from(document.querySelectorAll('.nav-section-link'))
@@ -155,7 +155,7 @@
       const url = new URL(value)
       return url.protocol === 'https:' &&
         url.hostname === 'github.com' &&
-        url.pathname.startsWith('/anmolkapil/plexo/releases/')
+        url.pathname.startsWith('/VG31OP/network-speed-combiner/releases/')
         ? url.href
         : null
     } catch {
@@ -441,7 +441,7 @@
     const timeout = setTimeout(() => controller.abort(), 9000)
     try {
       const [response, env] = await Promise.all([
-        fetch('https://api.github.com/repos/anmolkapil/plexo/releases?per_page=10', {
+        fetch('https://api.github.com/repos/VG31OP/network-speed-combiner/releases?per_page=10', {
           signal: controller.signal
         }),
         environment()
